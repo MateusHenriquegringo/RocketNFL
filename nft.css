@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior:smooth;
+}
+:root {
+    --body-background: #0e0e0e;
+    --color-logo: #ff5b50;
+    --card-color: #252525;
+    --text-color: #fff;
+    --subtitle-color: #5a5757;
+    --black-text: #000;
+    --color-input: #0D0D0D;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color:var(--subtitle-color)
+   }
+   ::-webkit-scrollbar-thumb {
+    background-color: var(--black-text);
+   }
+
+  #primeiro-bloco {
+    background-image: url(./assets.zip/assets.zip/background.png);
+    background-size: cover;
+  }
+
+  #primeiro-bloco header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+  }
+
+  #primeiro-bloco header ul {
+     color: var(--text-color);
+     list-style: none;
+     display: flex;
+     gap: 18vh;
+     justify-content:center;
+     font-family: 'Montserrat';
+     font-size:18px;
+  }
+  header button {
+    min-width: 200px;
+    min-height: 50px;
+    font-family: 'montserrat', sans-serif;
+    font-size: 20px;
+    color: var(--text-color);
+    background: var(--color-logo);
+   background: linear-gradient(90deg, #ff5b50 20%, #b80733 140%);
+    border: none;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  header button::before {
+  content: '';
+
+    min-width: calc(220px + 12px);
+    min-height: calc(50px + 12px);
+    border: 2px solid var(--color-logo);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .1s ease-in-out 0s;
+  }
+  
+  header button:hover, header button:focus {
+    color: var(--text-color);
+    transform: translateY(-6px);
+  }
+  
+  header button:hover::before, header button:focus::before {
+    opacity: 1;
+  }
+  
+  header button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 2px solid var(--color-logo);
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1s infinite;
+  }
+  
+ header button:hover::after,header button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+  
+    
+    #primeiro-bloco section {
+        padding: 2vw 5vw 5vw;
+        display: flex;
+        justify-content:space-between;
+        gap: 50px;
+    }
+    #primeiro-bloco section .titulo {
+        flex: 2;
+        padding-left: 100px;
+    }
+    #primeiro-bloco section .titulo h1 {
+        color: var(--text-color);
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 4em;
+    }
+    #primeiro-bloco section .titulo span {
+        color: var(--color-logo);
+        font-family: 'Montserrat';
+    }
+
+    #primeiro-bloco section .infos{
+        padding-top: 20px;
+        flex: 1;
+        padding-right: 20px;
+    }
+    #primeiro-bloco section .infos p, .infos h5 {
+        color: var(--text-color);
+        font-family: 'Montserrat';
+        font-size: 18px;
+    }
+    #primeiro-bloco section .infos .artistas {
+        padding-top: 60px;
+        display: flex;
+        align-items:flex-end;
+        gap: 10px;
+    }
+   
+    #primeiro-bloco section .logo img {
+        height: 250px;
+        padding-top: 30px;
+    }
+   main #grid {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap: 0;
+    grid-template-rows: 1fr 1fr;
+   }
+   main #grid img {
+    width: 22vw;
+   }
+   article {
+    background-color: var(--body-background);
+   }
+
+   article #grid-2 {
+    display: grid;
+    grid-template-areas:
+     "infos texto "
+     "infos banner";
+     grid-template-rows: 1.2fr 1fr;
+     grid-template-columns: 1.04fr 4fr;
+     font-family: 'Montserrat';
+   }
+
+   .container-texto{
+    grid-area:texto;
+    font-family: 'Montserrat';
+    display: flex;
+    padding:0 10%;
+    align-items: center;
+    gap: 200px;
+   }
+   .container-texto .texto1 {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 20px;
+   }
+   .container-texto .texto1 a {
+    color: var(--color-logo);
+   }
+   .container-infos {
+    grid-area: infos;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 20% 0;
+    border-right:2px solid var(--card-color);
+    border-bottom: 2px solid var(--card-color);
+   }
+   .container-infos p {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 3em;
+   }
+   .container-infos span {
+      color: var(--subtitle-color);
+      font-size: 1.5em;
+      font-weight: 500;
+   }
+   .container-infos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+   .container-banner{
+    grid-area: banner;
+   }
+   .container-banner img {
+     width: 100%;
+   }
+
+   #grid-3 .card {
+    width: 350px;
+    font-family: 'Montserrat';
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+   }
+   #grid-3 .card .astronauta {
+     display: flex;
+     justify-content: space-between;
+     color: var(--text-color);   
+   }
+   #grid-3 .card .astronauta h2 {
+    font-weight: 500;
+    font-size: 28px;
+   }
+   #grid-3 .card .nome {
+    display: flex;
+    justify-content: space-between;
+   }
+   #grid-3 .card .nome p {
+    color: var(--subtitle-color);
+    font-weight: 600;
+   }
+   #grid-3 .card .nome span {
+     color: var(--color-logo);
+     padding-right: 15px;
+   }
+   #grid-3 {
+    display: grid;
+    grid-template-areas:
+    "um dois"
+    "tres quatro";
+   }
+   #grid-3 :nth-child(4){
+    grid-area: quatro;
+   }
+   #grid-3 :nth-child(3){
+    grid-area: tres;
+   }
+   #grid-3 :nth-child(2){
+    grid-area: dois;
+   }
+  #grid-3 :nth-child(1){
+    grid-area: um;
+  }
+
+  #grid-3{
+    justify-content: space-around;
+  }
+  .card {
+    margin-top: 100px;
+  }
+ .populares {
+    font-family:"Montserrat";
+    font-weight: bold;
+    font-size: 2em;
+    color: var(--text-color);
+    background-color: var(--body-background);
+    padding: 10vw 16vw 0vw;
+ }
+  
+.populares span {
+    color: var(--color-logo);
+}
+#melhores-artistas {
+    background-color: var(--body-background);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 7vw;
+    gap: 10%;
+    row-gap: 100px;
+}
+#melhores-artistas h1 {
+    font-family: 'Montserrat';
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+    padding:180px 100px 0px 100px;
+    font-size: 3em;
+    gap: 10px;
+    flex-basis: 100%;
+}
+ span{
+    color: var(--color-logo);
+}
+ .quadro div {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat','sans-serif';
+    font-size: 1.3em;
+    justify-content:space-evenly ; 
+ }
+
+ .quadro div p {
+    color: var(--text-color);
+ }
+
+ .quadro {
+    display: flex;
+    background-color: var(--card-color);
+    width: fit-content;
+    padding: 30px;
+    gap: 40px;
+ }
+
+ #melhores-artistas .link, .link a ,.link img{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.1em;
+    font-family: 'Montserrat';
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+ }
+ #melhores-artistas a {
+    text-decoration: none;
+ }
+
+ #melhores-artistas a :hover{
+    background-color: var(--black-text);
+}
+
+ footer .head {
+    background-color: var(--card-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+ }
+ footer .head :last-child {
+    background-color: var(--color-logo);
+    padding: 1em;
+ }
+
+ footer {
+    background-color: var(--card-color);
+    color: var(--text-color);
+    display: flex;   
+    flex-wrap: wrap;
+ }
+
+ footer .head {
+    width: 100%;
+ }
+
+ footer .email {
+    padding: 6%;
+    flex: 1;
+    border: 1px solid var(--subtitle-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: 'Montserrat';
+    font-size: 35px;
+    font-weight: 500;
+    gap: 20px;
+ }
+ footer .email input {
+    height: 7vh;
+    width: 17vw;
+    background-color: var(--color-input);
+    border: 1px solid var(--color-input);
+    font-size: 20px;
+    padding-left: 15px;
+    color: var(--text-color);
+ }
+ footer .email button {
+    height: 7vh;
+    width: 7vw;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 20px;
+ }
+ footer .email .input {
+     display: flex;
+
+ }
+ footer .listas {
+    flex: 2.5;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    border: 1px solid var(--subtitle-color);
+
+}
+.listas ul {
+    list-style: none;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: var(--subtitle-color);
+}
+.listas ul :nth-child(1) {
+    color: var(--text-color);
+    font-weight: bold;
+}
+.listas ul li {
+    margin-top: 30px;
+}
+
+footer .redes {
+   flex-basis: 100vw;
+   display: flex;
+   padding: 5vw 5vw 3vw 5vw;
+   justify-content: space-between;
+}
+footer .redes :nth-child(1) {
+     color: var(--subtitle-color);
+     text-decoration: none;
+     font-family: 'Montserrat';
+     font-size: 20px;
+}
+footer .redes .logos {
+    display: flex;
+    gap: 2vw;
+}
