@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior:smooth;
+    font-family: 'Montserrat';
     font-family: 'montserrat';
 }
 :root {
@@ -40,15 +41,17 @@
      display: flex;
      gap: 18vh;
      justify-content:center;
+     font-family: 'Montserrat';
      font-size:18px;
   }
   header button {
     min-width: 200px;
     min-height: 50px;
+    font-family: 'montserrat', sans-serif;
     font-size: 20px;
     color: var(--text-color);
     background: var(--color-logo);
-   background: linear-gradient(90deg, #ff5b50 20%, #b80733 140%);
+    background: linear-gradient(90deg, #ff5b50 20%, #b80733 140%);
     border: none;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
@@ -124,11 +127,13 @@
     }
     #primeiro-bloco section .titulo h1 {
         color: var(--text-color);
+        font-family: 'Montserrat';
         font-weight: bold;
         font-size: 4em;
     }
     #primeiro-bloco section .titulo span {
         color: var(--color-logo);
+        font-family: 'Montserrat';
     }
 
     #primeiro-bloco section .infos{
@@ -138,6 +143,7 @@
     }
     #primeiro-bloco section .infos p, .infos h5 {
         color: var(--text-color);
+        font-family: 'Montserrat';
         font-size: 18px;
     }
     #primeiro-bloco section .infos .artistas {
@@ -171,10 +177,12 @@
      "infos banner";
      grid-template-rows: 1.2fr 1fr;
      grid-template-columns: 1.04fr 4fr;
+     font-family: 'Montserrat';
    }
 
    .container-texto{
     grid-area:texto;
+    font-family: 'Montserrat';
     display: flex;
     padding:0 10%;
     align-items: center;
@@ -224,6 +232,7 @@
 
    #grid-3 .card {
     width: 350px;
+    font-family: 'Montserrat';
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -276,6 +285,7 @@
     margin-top: 100px;
   }
  .populares {
+    font-family:"Montserrat";
     font-weight: bold;
     font-size: 2em;
     color: var(--text-color);
@@ -296,6 +306,7 @@
     row-gap: 100px;
 }
 #melhores-artistas h1 {
+    font-family: 'Montserrat';
     display: flex;
     justify-content: center;
     color: var(--text-color);
@@ -310,6 +321,7 @@
  .quadro div {
     display: flex;
     flex-direction: column;
+    font-family: 'Montserrat','sans-serif';
     font-size: 1.3em;
     justify-content:space-evenly ; 
  }
@@ -330,6 +342,7 @@
     text-decoration: none;
     color: var(--text-color);
     font-size: 1.1em;
+    font-family: 'Montserrat';
     display: flex;
     gap: 30px;
     margin-bottom: 50px;
@@ -378,6 +391,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    font-family: 'Montserrat';
     font-size: 35px;
     font-weight: 500;
     gap: 20px;
@@ -394,6 +408,7 @@
  footer .email button {
     height: 7vh;
     width: 7vw;
+    font-family: 'Montserrat';
     font-weight: bold;
     font-size: 20px;
  }
@@ -411,6 +426,7 @@
 }
 .listas ul {
     list-style: none;
+    font-family: 'Montserrat';
     font-size: 20px;
     color: var(--subtitle-color);
 }
@@ -431,6 +447,7 @@ footer .redes {
 footer .redes :nth-child(1) {
      color: var(--subtitle-color);
      text-decoration: none;
+     font-family: 'Montserrat';
      font-size: 20px;
 }
 footer .redes .logos {
